@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniMind AI — Next-Gen EdTech Multi-Agent Platform</title>
+    <meta name="description" content="OmniMind AI is an advanced AI-powered educational technology platform offering a multi-agent suite for personalized learning, automated grading, and institutional analytics.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for Visual Analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-brain brand-icon"></i>
+                <span class="brand-text">OmniMind<span class="brand-accent">.AI</span></span>
+                <span class="badge-v2">v2.5 Enterprise</span>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="#agents-hub" class="nav-link active" id="nav-agents"><i class="fa-solid fa-robot"></i> AI Agents Suite</a>
+                <a href="#pathways" class="nav-link" id="nav-pathways"><i class="fa-solid fa-route"></i> Learning Paths</a>
+                <a href="#teacher-studio" class="nav-link" id="nav-teacher"><i class="fa-solid fa-chalkboard-user"></i> Teacher Studio</a>
+                <a href="#business-deck" class="nav-link" id="nav-business"><i class="fa-solid fa-chart-line"></i> Business & ROI</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle-btn" title="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button class="btn btn-primary" id="launch-demo-btn">
+                    <i class="fa-solid fa-rocket"></i> Launch Full Suite
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-tag"><i class="fa-solid fa-sparkles"></i> Revolutionizing EdTech with Multi-Agent AI</div>
+                <h1 class="hero-title">Empowering Education with <span class="gradient-text">6 Specialized AI Agents</span></h1>
+                <p class="hero-subtitle">OmniMind AI combines adaptive STEM tutoring, essay criticism, live code mentoring, Socratic inquiry, and teacher automation into one seamless platform.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">98.4%</span>
+                        <span class="stat-label">Accuracy in STEM Solving</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">10x</span>
+                        <span class="stat-label">Faster Teacher Grading</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">6 Agents</span>
+                        <span class="stat-label">Tailored to Every Subject</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">85%</span>
+                        <span class="stat-label">Higher Retention Rate</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Agents Hub Section -->
+        <section id="agents-hub" class="section-container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-microchip"></i> Specialized AI Agents Suite</h2>
+                <p>Select an AI agent below to experience subject-specific intelligence tailored to your exact learning needs.</p>
+            </div>
+
+            <!-- Agent Grid Selector -->
+            <div class="agents-grid" id="agents-grid">
+                <!-- Agent 1: OmniTutor AI -->
+                <div class="agent-card active" data-agent="omnitutor">
+                    <div class="agent-icon icon-cyan"><i class="fa-solid fa-calculator"></i></div>
+                    <div class="agent-info">
+                        <h3>OmniTutor AI</h3>
+                        <span class="agent-role">STEM & Math Specialist</span>
+                        <p>Step-by-step calculus, physics, and chemistry solver with instant graphical visualization.</p>
+                    </div>
+                    <span class="agent-badge">Active</span>
+                </div>
+
+                <!-- Agent 2: VerbaMind AI -->
+                <div class="agent-card" data-agent="verbamind">
+                    <div class="agent-icon icon-purple"><i class="fa-solid fa-pen-nib"></i></div>
+                    <div class="agent-info">
+                        <h3>VerbaMind AI</h3>
+                        <span class="agent-role">Writing & Rhetoric Coach</span>
+                        <p>Critiques essay structure, arguments, thesis strength, and vocabulary in real-time.</p>
+                    </div>
+                </div>
+
+                <!-- Agent 3: CodeCraft AI -->
+                <div class="agent-card" data-agent="codecraft">
+                    <div class="agent-icon icon-emerald"><i class="fa-solid fa-code"></i></div>
+                    <div class="agent-info">
+                        <h3>CodeCraft AI</h3>
+                        <span class="agent-role">Coding & Software Mentor</span>
+                        <p>Live debugging, code explanation, algorithm complexity analysis, and syntax tips.</p>
+                    </div>
+                </div>
+
+                <!-- Agent 4: Socratic AI -->
+                <div class="agent-card" data-agent="socratic">
+                    <div class="agent-icon icon-amber"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="agent-info">
+                        <h3>Socratic AI</h3>
+                        <span class="agent-role">Inquiry & Debate Partner</span>
+                        <p>Guides students through deep questioning to build critical thinking without giving easy answers.</p>
+                    </div>
+                </div>
+
+                <!-- Agent 5: EduPlan AI -->
+                <div class="agent-card" data-agent="eduplan">
+                    <div class="agent-icon icon-rose"><i class="fa-solid fa-compass"></i></div>
+                    <div class="agent-info">
+                        <h3>EduPlan AI</h3>
+                        <span class="agent-role">Curriculum & Study Planner</span>
+                        <p>Maps individualized study schedules, skill gap radar, and milestone tracking.</p>
+                    </div>
+                </div>
+
+                <!-- Agent 6: EvaluaAI -->
+                <div class="agent-card" data-agent="evalua">
+                    <div class="agent-icon icon-blue"><i class="fa-solid fa-award"></i></div>
+                    <div class="agent-info">
+                        <h3>EvaluaAI</h3>
+                        <span class="agent-role">Teacher Studio & Assessor</span>
+                        <p>Automated rubric grading, detailed feedback reports, and instant quiz creation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Agent Interactive Chat Workspace -->
+            <div class="agent-workspace" id="agent-workspace">
+                <div class="workspace-header">
+                    <div class="active-agent-detail">
+                        <div class="active-agent-avatar" id="active-agent-avatar">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h3 id="active-agent-title">OmniTutor AI — STEM & Math Specialist</h3>
+                            <span class="online-status"><span class="dot"></span> Online & Ready for Complex Problems</span>
+                        </div>
+                    </div>
+                    <div class="workspace-controls">
+                        <button class="btn-sm btn-outline" id="clear-chat-btn"><i class="fa-solid fa-trash"></i> Clear</button>
+                        <button class="btn-sm btn-outline" id="sample-prompt-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> Auto-Generate Question</button>
+                    </div>
+                </div>
+
+                <!-- Sample Prompts Carousel -->
+                <div class="sample-prompts-bar" id="sample-prompts-bar">
+                    <!-- Populated dynamically by JS -->
+                </div>
+
+                <!-- Chat Box -->
+                <div class="chat-container" id="chat-container">
+                    <div class="message message-system">
+                        <i class="fa-solid fa-robot"></i>
+                        <div class="message-bubble">
+                            <strong>OmniTutor AI System:</strong> Hello! I'm your dedicated STEM & Math AI Agent. Ask me to solve calculus derivatives, physics kinematics, organic chemistry mechanisms, or explain complex formulas step-by-step!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-wrapper">
+                        <textarea id="chat-input" placeholder="Ask your question or paste a problem here... (e.g. 'Solve Integral of x*sin(x) dx step by step')" rows="2"></textarea>
+                        <div class="input-tools">
+                            <button class="tool-btn" id="latex-tool-btn" title="Insert Formula"><i class="fa-solid fa-square-root-variable"></i></button>
+                            <button class="tool-btn" id="code-tool-btn" title="Insert Code Block"><i class="fa-solid fa-code"></i></button>
+                            <button class="tool-btn" id="voice-tool-btn" title="Voice Input Simulation"><i class="fa-solid fa-microphone"></i></button>
+                            <button class="btn btn-primary" id="send-chat-btn">
+                                <span>Send Query</span> <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Pathways Section -->
+        <section id="pathways" class="section-container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-route"></i> Adaptive Skill Pathways</h2>
+                <p>Real-time competency tracking and personalized AI curriculum mapping.</p>
+            </div>
+
+            <div class="pathway-grid">
+                <!-- Track Selection -->
+                <div class="track-card">
+                    <div class="track-header">
+                        <span class="track-badge">Recommended</span>
+                        <h3>Artificial Intelligence & Machine Learning Track</h3>
+                        <p>Progress: 65% Completed • 12/18 Micro-Modules</p>
+                    </div>
+
+                    <div class="skill-nodes">
+                        <div class="node-item completed">
+                            <div class="node-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="node-info">
+                                <h4>1. Python Fundamentals & NumPy Matrix Math</h4>
+                                <span>Mastered • Score 98%</span>
+                            </div>
+                        </div>
+                        <div class="node-item completed">
+                            <div class="node-icon"><i class="fa-solid fa-check"></i></div>
+                            <div class="node-info">
+                                <h4>2. Supervised Learning & Gradient Descent</h4>
+                                <span>Mastered • Score 94%</span>
+                            </div>
+                        </div>
+                        <div class="node-item active-node">
+                            <div class="node-icon"><i class="fa-solid fa-spinner fa-spin"></i></div>
+                            <div class="node-info">
+                                <h4>3. Deep Learning & Neural Network Architectures</h4>
+                                <span>In Progress • EduPlan AI Recommends: 2 Micro-Lessons</span>
+                            </div>
+                            <button class="btn-sm btn-primary" id="start-module-btn">Resume Module</button>
+                        </div>
+                        <div class="node-item locked">
+                            <div class="node-icon"><i class="fa-solid fa-lock"></i></div>
+                            <div class="node-info">
+                                <h4>4. Transformer Networks & LLM Fine-Tuning</h4>
+                                <span>Locked • Unlocks upon Module 3 completion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Radar Analytics -->
+                <div class="radar-card">
+                    <h3>Cognitive Competency Matrix</h3>
+                    <p class="radar-desc">OmniMind AI continuously evaluates problem solving speed, retention, and conceptual depth.</p>
+                    <div class="chart-box">
+                        <canvas id="competencyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teacher Studio (EvaluaAI) Section -->
+        <section id="teacher-studio" class="section-container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-chalkboard-user"></i> EvaluaAI Teacher Studio</h2>
+                <p>Automate essay grading, generate rubric feedback, and create adaptive quizzes in seconds.</p>
+            </div>
+
+            <div class="studio-tabs">
+                <button class="studio-tab active" data-tab="grader"><i class="fa-solid fa-file-signature"></i> Essay & Assignment Auto-Grader</button>
+                <button class="studio-tab" data-tab="quiz-gen"><i class="fa-solid fa-list-check"></i> AI Quiz Generator & Proctor</button>
+            </div>
+
+            <!-- Auto Grader Tab -->
+            <div class="studio-content active" id="tab-grader">
+                <div class="grader-grid">
+                    <div class="grader-input-panel">
+                        <h3>Student Submission Input</h3>
+                        <div class="form-group">
+                            <label>Assignment Topic:</label>
+                            <input type="text" id="essay-topic" value="Impact of Generative AI on Modern Higher Education" class="input-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Rubric Focus Areas:</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" checked id="rubric-clarity"> Clarity & Structure</label>
+                                <label><input type="checkbox" checked id="rubric-thesis"> Thesis Strength</label>
+                                <label><input type="checkbox" checked id="rubric-evidence"> Citation & Evidence</label>
+                                <label><input type="checkbox" checked id="rubric-grammar"> Grammar & Style</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Student Essay Content:</label>
+                            <textarea id="essay-text" class="input-control" rows="8">Generative AI is transforming education at a rapid pace. While traditional classrooms relied on static textbooks, AI tools provide instant feedback to students. However, concerns regarding academic integrity and critical thinking remain prominent. Educational institutions must adopt AI responsibly rather than outright banning it, integrating AI ethics into standard curriculums.</textarea>
+                        </div>
+                        <button class="btn btn-primary" id="run-grader-btn">
+                            <i class="fa-solid fa-microchip"></i> Run EvaluaAI Instant Grading
+                        </button>
+                    </div>
+
+                    <!-- Grading Result Output -->
+                    <div class="grader-result-panel" id="grader-result-panel">
+                        <div class="result-placeholder" id="result-placeholder">
+                            <i class="fa-solid fa-award placeholder-icon"></i>
+                            <p>Click <strong>"Run EvaluaAI Instant Grading"</strong> to see detailed rubric scores, line-by-line feedback, and grade breakdown.</p>
+                        </div>
+
+                        <div class="result-content hidden" id="result-content">
+                            <div class="grade-badge-card">
+                                <div class="grade-score" id="grade-score">92/100</div>
+                                <div class="grade-letter" id="grade-letter">Grade: A</div>
+                            </div>
+
+                            <div class="rubric-scores">
+                                <div class="rubric-bar">
+                                    <span>Clarity & Structure</span>
+                                    <div class="bar-bg"><div class="bar-fill" id="bar-clarity" style="width: 95%;"></div></div>
+                                    <span id="val-clarity">95%</span>
+                                </div>
+                                <div class="rubric-bar">
+                                    <span>Thesis Strength</span>
+                                    <div class="bar-bg"><div class="bar-fill" id="bar-thesis" style="width: 90%;"></div></div>
+                                    <span id="val-thesis">90%</span>
+                                </div>
+                                <div class="rubric-bar">
+                                    <span>Citation & Evidence</span>
+                                    <div class="bar-bg"><div class="bar-fill" id="bar-evidence" style="width: 85%;"></div></div>
+                                    <span id="val-evidence">85%</span>
+                                </div>
+                                <div class="rubric-bar">
+                                    <span>Grammar & Style</span>
+                                    <div class="bar-bg"><div class="bar-fill" id="bar-grammar" style="width: 98%;"></div></div>
+                                    <span id="val-grammar">98%</span>
+                                </div>
+                            </div>
+
+                            <div class="ai-feedback-box">
+                                <h4><i class="fa-solid fa-comment-dots"></i> EvaluaAI Feedback Summary:</h4>
+                                <p id="feedback-text">"Excellent overview of AI in higher education. Strong argument regarding institutional responsibility. To reach 100%, consider adding 2 concrete empirical citations on student performance improvements."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quiz Generator Tab -->
+            <div class="studio-content" id="tab-quiz-gen">
+                <div class="quiz-gen-panel">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Quiz Subject:</label>
+                            <select id="quiz-subject" class="input-control">
+                                <option value="Calculus">Calculus & Derivatives</option>
+                                <option value="Python">Python Data Structures</option>
+                                <option value="Physics">Quantum Physics Basics</option>
+                                <option value="Ethics">AI Ethics & Governance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Difficulty Level:</label>
+                            <select id="quiz-difficulty" class="input-control">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate" selected>Intermediate</option>
+                                <option value="Advanced">Advanced (Olympiad/University)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Number of Questions:</label>
+                            <select id="quiz-count" class="input-control">
+                                <option value="3">3 Quick Check Questions</option>
+                                <option value="5" selected>5 Standard Questions</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="generate-quiz-btn">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Interactive Live Quiz
+                    </button>
+
+                    <!-- Live Quiz Container -->
+                    <div class="live-quiz-card hidden" id="live-quiz-card">
+                        <div class="quiz-header">
+                            <h3 id="quiz-title">Calculus & Derivatives — Adaptive Quiz</h3>
+                            <div class="quiz-timer" id="quiz-timer"><i class="fa-solid fa-stopwatch"></i> 02:00</div>
+                        </div>
+                        <div class="quiz-body" id="quiz-body">
+                            <!-- Populated by JS -->
+                        </div>
+                        <div class="quiz-footer">
+                            <button class="btn btn-outline" id="prev-q-btn" disabled>Previous</button>
+                            <span id="quiz-progress-text">Question 1 of 3</span>
+                            <button class="btn btn-primary" id="next-q-btn">Next Question</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Deck & ROI Section -->
+        <section id="business-deck" class="section-container">
+            <div class="section-header">
+                <h2><i class="fa-solid fa-chart-line"></i> Business Plan & Financial Model</h2>
+                <p>Institutional ROI projection, revenue breakdown, and market opportunity metrics derived from the report.</p>
+            </div>
+
+            <div class="business-grid">
+                <!-- Financial Projections Card -->
+                <div class="biz-card">
+                    <h3>Interactive Revenue Projection Simulator</h3>
+                    <p class="biz-desc">Adjust institutional subscribers and pricing tiers to see 3-Year ARR (Annual Recurring Revenue) projections.</p>
+                    
+                    <div class="slider-group">
+                        <label>Institutional Universities / Schools: <strong id="slider-schools-val">50</strong></label>
+                        <input type="range" id="slider-schools" min="5" max="200" value="50" class="slider-control">
+                    </div>
+
+                    <div class="slider-group">
+                        <label>Pro Student Subscribers: <strong id="slider-students-val">25,000</strong></label>
+                        <input type="range" id="slider-students" min="1000" max="100000" step="1000" value="25000" class="slider-control">
+                    </div>
+
+                    <div class="arr-projection-display">
+                        <div class="arr-stat">
+                            <span>Projected Year 1 ARR</span>
+                            <h3 id="arr-y1">$2.4M</h3>
+                        </div>
+                        <div class="arr-stat highlight">
+                            <span>Projected Year 3 ARR</span>
+                            <h3 id="arr-y3">$8.9M</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Chart -->
+                <div class="biz-card">
+                    <h3>Revenue Growth Trajectory ($ Millions)</h3>
+                    <div class="chart-box">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor & Unique Value Proposition Matrix -->
+            <div class="uvp-table-card">
+                <h3>Platform Differentiation Matrix</h3>
+                <div class="table-responsive">
+                    <table class="uvp-table">
+                        <thead>
+                            <tr>
+                                <th>Feature / Metric</th>
+                                <th>Legacy LMS / Apps</th>
+                                <th>Generic LLM Chat</th>
+                                <th class="highlight-col">OmniMind AI (Latest)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Multi-Agent Specialization</td>
+                                <td><i class="fa-solid fa-xmark text-danger"></i> None</td>
+                                <td><i class="fa-solid fa-triangle-exclamation text-warning"></i> Single General Model</td>
+                                <td class="highlight-col"><i class="fa-solid fa-circle-check text-success"></i> 6 Dedicated Subject Agents</td>
+                            </tr>
+                            <tr>
+                                <td>Automated Teacher Essay Grader</td>
+                                <td><i class="fa-solid fa-xmark text-danger"></i> Manual Only</td>
+                                <td><i class="fa-solid fa-triangle-exclamation text-warning"></i> Basic Text Prompt</td>
+                                <td class="highlight-col"><i class="fa-solid fa-circle-check text-success"></i> EvaluaAI Rubric Engine</td>
+                            </tr>
+                            <tr>
+                                <td>Adaptive Skill Radar & Pathways</td>
+                                <td><i class="fa-solid fa-triangle-exclamation text-warning"></i> Static Syllabus</td>
+                                <td><i class="fa-solid fa-xmark text-danger"></i> No Progress Tracking</td>
+                                <td class="highlight-col"><i class="fa-solid fa-circle-check text-success"></i> Real-time Cognitive Mapping</td>
+                            </tr>
+                            <tr>
+                                <td>Socratic Critical Thinking Guardrails</td>
+                                <td><i class="fa-solid fa-xmark text-danger"></i> N/A</td>
+                                <td><i class="fa-solid fa-xmark text-danger"></i> Gives Direct Answers</td>
+                                <td class="highlight-col"><i class="fa-solid fa-circle-check text-success"></i> Guided Discovery Coaching</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <i class="fa-solid fa-brain brand-icon"></i>
+                <span class="brand-text">OmniMind<span class="brand-accent">.AI</span></span>
+                <p>Empowering global education with next-gen multi-agent intelligence.</p>
+            </div>
+            <div class="footer-links">
+                <span>© 2026 OmniMind AI EdTech Systems. All rights reserved.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
